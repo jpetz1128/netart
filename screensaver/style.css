@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    font-family: Arial;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+}
+
+p {
+    color: gray;
+    transition: opacity 1s;
+}
+
+body:hover p {
+    opacity: 0;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 1s;
+}
+
+.one {
+    background-color: red;
+    top: 30%;
+    left: 20%;
+}
+
+.two {
+    background-color: blue;
+    top: 60%;
+    left: 40%;
+}
+
+.three {
+    background-color: lime;
+    top: 40%;
+    left: 65%;
+}
+
+.four {
+    background-color: yellow;
+    top: 70%;
+    left: 80%;
+}
+
+body:hover .one {
+    animation: bounce1 4s infinite alternate linear;
+}
+
+body:hover .two {
+    animation: bounce2 6s infinite alternate linear;
+}
+
+body:hover .three {
+    animation: bounce3 5s infinite alternate linear;
+}
+
+body:hover .four {
+    animation: bounce4 7s infinite alternate linear;
+}
+
+@keyframes bounce1 {
+    from { top: 30%; left: 20%; }
+    to { top: 80%; left: 85%; }
+}
+
+@keyframes bounce2 {
+    from { top: 60%; left: 40%; }
+    to { top: 10%; left: 75%; }
+}
+
+@keyframes bounce3 {
+    from { top: 40%; left: 65%; }
+    to { top: 75%; left: 10%; }
+}
+
+@keyframes bounce4 {
+    from { top: 70%; left: 80%; }
+    to { top: 15%; left: 15%; }
+}
