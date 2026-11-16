@@ -1,0 +1,74 @@
+body {
+    background-color: #87ceeb;
+    color: #253c59;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: background-color 1.5s, color 1.5s;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 70px;
+}
+
+p {
+    font-size: 22px;
+}
+
+.sky {
+    position: relative;
+    height: 300px;
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+#sun, #moon {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    transition: opacity 1.5s;
+}
+
+#sun {
+    background: #ffdd33;
+    box-shadow: 0 0 60px #ffdd33;
+}
+
+#moon {
+    background: #eeeeee;
+    box-shadow: 0 0 30px #ffffff;
+    opacity: 0;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: white;
+    border: 2px solid #253c59;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #dddddd;
+}
+
+/* Night mode */
+
+body.night {
+    background-color: #10152e;
+    color: white;
+}
+
+.night #sun, .night {
+    opacity: 0;
+}
+
+.night #moon, .night {
+    opacity: 1;
+}
